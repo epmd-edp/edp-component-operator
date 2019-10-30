@@ -3,5 +3,6 @@ kind: EDPComponent
 metadata:
   name: example-edpcomponent
 spec:
-  # Add fields here
-  size: 3
+  type: jenkins
+  url: https://example-jenkins
+  icon: base64encode
