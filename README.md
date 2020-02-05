@@ -44,3 +44,6 @@ _**NOTE:** It is highly recommended to use the latest released version._
 ```bash
 for file in $(ls deploy/crds/*_crd.yaml); do kubectl apply -f $file; done
 ```
+
+# Local Development
+To setup local environment for developing operator use [Local Development](documentation/local_development.md) user guide.
