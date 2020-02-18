@@ -45,5 +45,5 @@ _**NOTE:** It is highly recommended to use the latest released version._
 for file in $(ls deploy/crds/*_crd.yaml); do kubectl apply -f $file; done
 ```
 
-# Local Development
+### Local Development
 In order to develop the operator, first set up a local environment. For details, please refer to the [Local Development](documentation/local_development.md) page.
