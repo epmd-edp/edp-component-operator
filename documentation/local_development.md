@@ -17,8 +17,14 @@ In order to run the operator, follow the steps above:
 1. Clone repository;
 2. Open folder in GoLand Intellij IDEA, click the ![add_config_button](../readme-resource/add_config_button.png "add_config_button") button and select the **Go Build** option:
 ![add_configuration](../readme-resource/add_configuration.png "add_configuration") 
-3. Set the path to the main.go file in Files field, path to the Working directory for operator and set Specify a platform name (OpenShift/Kubernetes) and selected namespace in Environment tab
-![build-config](../readme-resource/build_config.png "build-config") 
+3. In Configuration tab, fill in the following:
+
+    3.1. In the Field field, indicate the path to the main.go file;
+    
+    3.2. In the Working directory field, indicate the path to the operator;
+    
+    3.3. In the Environment field, specify the platform name (OpenShift/Kubernetes);
+   ![build-config](../readme-resource/build_config.png "build-config") 
 4. Run 'go build main.go' (Shift+F10);
 5. Check the operator logs in output console: 
 ```
