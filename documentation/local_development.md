@@ -12,7 +12,7 @@
 * GoLand Intellij IDEA or another IDE.
 
 ### Operator Launch
-In order to run the operator, follow the steps above:
+In order to run the operator, follow the steps below:
 
 1. Clone repository;
 2. Open folder in GoLand Intellij IDEA, click the ![add_config_button](../readme-resource/add_config_button.png "add_config_button") button and select the **Go Build** option:
