@@ -32,19 +32,26 @@ EDP installation can be applied on two container orchestration platforms: OpenSh
 _**NOTE:** Installation of operators is platform-independent, that is why there is a unified instruction for deploying._
 
 ### Prerequisites
-1. Linux machine or Windows Subsystem for Linux instance with [Helm 3](https://helm.sh/docs/intro/install/) installed;
-2. Cluster admin access to the cluster;
-3. EDP project/namespace is deployed by following one of the instructions: [edp-install-openshift](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/openshift_install_edp.md#edp-project) or [edp-install-kubernetes](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/kubernetes_install_edp.md#edp-namespace).
+* Linux machine or Windows Subsystem for Linux instance with [Helm 3](https://helm.sh/docs/intro/install/) installed;
+* Cluster admin access to the cluster;
+* EDP project/namespace is deployed by following one of the instructions: [edp-install-openshift](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/openshift_install_edp.md#edp-project) or [edp-install-kubernetes](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/kubernetes_install_edp.md#edp-namespace).
 
 ### Installation
-* Go to the [releases](https://github.com/epmd-edp/edp-component-operator/releases) page of this repository, choose a version, download an archive and unzip it;
 
-_**NOTE:** It is highly recommended to use the latest released version._
+In order to install the edp-component-operator, follow the steps below:
 
-* Go to the unzipped directory and deploy operator:
-```bash
-helm install edp-component-operator deploy-templates
-```
+1. Go to the [releases](https://github.com/epmd-edp/edp-component-operator/releases) page of this repository, choose a version, download an archive, and unzip it;
+
+    _**NOTE:** It is highly recommended to use the latest released version._
+2. Navigate to the unzipped directory and deploy an operator:
+    ```bash
+    helm install edp-component-operator --namespace <edp_cicd_project> --set name=edp-component-operator --set namespace=<edp_cicd_project> --set platform=<platform_type> deploy-templates
+    ```
+    - _<edp_cicd_project> - a namespace or a project name (in case of OpenShift) that is created by one of the instructions: [edp-install-openshift](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/openshift_install_edp.md#edp-project) or [edp-install-kubernetes](https://github.com/epmd-edp/edp-install/blob/release-2.3/documentation/kubernetes_install_edp.md#edp-namespace);_ 
+    - _<platform_type> - a platform type that can be "kubernetes" or "openshift";_
+
+    _**NOTE**: As the edp-component-operator contains only CRD, the "Error: no objects visited" error message will be displayed._
+3. Make sure that edpcomponents.v1.edp.epam.com CRD exists in your cluster.
 
 ### Local Development
 In order to develop the operator, first set up a local environment. For details, please refer to the [Local Development](documentation/local_development.md) page.
