@@ -1,0 +1,7 @@
+Verified+1: CI Jenkins
+Code-Review+2: Viktor Voronin <viktor_voronin@epam.com>
+Submitted-by: Viktor Voronin <viktor_voronin@epam.com>
+Submitted-at: Wed, 15 Jul 2020 15:05:01 +0000
+Reviewed-on: https://gerrit-oc-green-edp-cicd.delivery.aws.main.edp.projects.epam.com/c/edp-component-operator/+/3711
+Project: edp-component-operator
+Branch: refs/heads/release/0.3
