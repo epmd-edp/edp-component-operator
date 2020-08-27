@@ -35,6 +35,8 @@ spec:
               type: string
             icon:
               type: string
+            visible:
+              type: boolean
           type: object
         status:
           type: object

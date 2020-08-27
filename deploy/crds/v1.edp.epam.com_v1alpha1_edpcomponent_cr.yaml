@@ -6,3 +6,4 @@ spec:
   type: jenkins
   url: https://example-jenkins
   icon: base64encode
+  visible: true

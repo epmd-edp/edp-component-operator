@@ -10,9 +10,10 @@ import (
 // EDPComponentSpec defines the desired state of EDPComponent
 // +k8s:openapi-gen=true
 type EDPComponentSpec struct {
-	Type string `json:"type"`
-	Url  string `json:"url"`
-	Icon string `json:"icon"`
+	Type    string `json:"type"`
+	Url     string `json:"url"`
+	Icon    string `json:"icon"`
+	Visible bool   `json:"visible"`
 }
 
 // EDPComponentStatus defines the observed state of EDPComponent
